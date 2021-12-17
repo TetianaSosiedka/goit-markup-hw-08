@@ -1,0 +1,33 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header__wrap {
+  display: flex;
+  align-items: center;
+}
+.header__nav {
+  @include font($fs: 14px, $lh: 1.14, $ls: 0.02em, $fw: 500);
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.header__nav-list {
+  display: flex;
+}
+.header__nav-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.header__nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-transform: capitalize;
+  color: var(--color-headlines);
+  transition: color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--color-decor);
+  }
+}

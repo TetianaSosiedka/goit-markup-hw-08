@@ -1,0 +1,35 @@
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px -15px;
+}
+.client__item {
+  flex-basis: calc((100% - 2 * 30px) / 2);
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 6 * 30px) / 6);
+  }
+  margin: 0 15px 15px;
+}
+.client__link {
+  display: flex;
+  width: 100%;
+  padding: 16px 0;
+  justify-content: center;
+  color: var(--bg-icon);
+  border: 1px solid var(--bg-icon);
+  border-radius: 4px;
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--color-decor);
+    border-color: var(--color-decor);
+  }
+}
+
+.client__svg {
+  fill: currentColor;
+}

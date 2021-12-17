@@ -1,0 +1,37 @@
+.icons-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -5px;
+}
+/* .icons-gallery--margin-bottom {
+  margin-bottom: 24px;
+  //margin-bottom: 30px;
+} */
+.icons-gallery__item {
+  margin: 0 5px;
+}
+.icons-gallery__link {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--bg-icon);
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--color-decor);
+    color: var(--bg-main);
+  }
+}
+.icons-gallery__link--dark {
+  color: var(--bg-main);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.icons-gallery__svg {
+  display: flex;
+  fill: currentColor;
+}

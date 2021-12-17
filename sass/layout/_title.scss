@@ -1,0 +1,17 @@
+.title {
+  @include font($fs: 28px, $lh: 1.18, $ls: 0.03em, $fw: 700);
+  @media screen and (min-width: 1200px) {
+    @include font($fs: 36px, $lh: 1.17, $ls: 0.03em, $fw: 700);
+  }
+  text-align: center;
+  color: var(--color-headlines);
+}
+.title--margin-bottom {
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+.title--light {
+  color: var(--color-headlines-second);
+}

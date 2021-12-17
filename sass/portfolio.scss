@@ -1,0 +1,24 @@
+/*------------------СБОРЩИК СТРАНИЦЫ ПОРТФОЛИО-------------------*/
+/*Глобальные переменные, миксины и т.п.*/
+@import "./utils/variables";
+@import "./utils/hidden";
+@import "./utils/mixins";
+
+/*Сброс стилей*/
+@import "./base/reset";
+
+/*Общие классы*/
+@import "./components/container";
+@import "./components/section";
+@import "./components/current";
+@import "./components/modal";
+
+/*Макет*/
+@import "./layout/header";
+@import "./layout/logo";
+@import "./layout/title";
+@import "./layout/contacts";
+@import "./layout/button";
+@import "./layout/portfolio";
+@import "./layout/icons-gallary";
+@import "./layout/footer";

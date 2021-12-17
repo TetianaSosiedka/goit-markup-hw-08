@@ -1,0 +1,90 @@
+.portfolio__button-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+  font-family: inherit;
+}
+.portfolio__button-item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.portfolio__item {
+  flex-basis: calc((100% - 3 * 32px) / 3);
+  margin: 15px;
+  transition: transform 250ms var(--timing-function);
+}
+.portfolio__button {
+  padding: 6px 22px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+}
+.product {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 1px solid #eeeeee;
+  background-color: var(--bg-main);
+  transition: box-shadow 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+}
+
+.produck__details {
+  position: relative;
+  overflow: hidden;
+}
+.product__img {
+  display: block;
+  width: 100%;
+}
+.product__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+  .product:hover &,
+  .product:focus & {
+    transform: translateY(0);
+  }
+}
+.product__description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 0 24px;
+  color: var(--bg-main);
+  opacity: 0;
+  transition: opacity 450ms var(--timing-function);
+  .product:hover &,
+  .product:focus & {
+    opacity: 1;
+  }
+}
+
+.product__board {
+  padding: 20px 24px;
+}
+.product__title {
+  margin-bottom: 4px;
+  @include font($fw: 700, $fs: 18px, $lh: 2, $ls: 0.06em);
+}
+.product__direction {
+  @include font($fs: 16px, $lh: 1.87, $ls: 0.03em);
+  color: var(--color-text);
+}
