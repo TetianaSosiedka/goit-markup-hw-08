@@ -18,28 +18,27 @@
 </head>
 <body>
     <!--Шапка-->
-<!--     <header class="header">
+    <header class="header">
         <div class="container">
             <div class="header__wrap">
-                <nav class="header__nav"> -->
-                    <!--Логотип-->
-                    <!-- <a class="logo link" href="./index.html" title="Страница сайта WebStudio">
-                        <span class="logo__colored-part">Web</span>Studio</a> -->
-                    <!--Постраничная навигация-->
-                    <!-- <ul class="header__nav-list list">
+                <!--Логотип-->
+                <a class="logo link" href="./index.html" title="Страница сайта WebStudio">
+                    <span class="logo__colored-part">Web</span>Studio</a>
+                <!--Меню -->
+                <nav class="header__nav">
+                    <ul class="header__nav-list list">
                         <li class="header__nav-item">
                             <a class="header__nav-link link" href="./index.html" title="Студия">Студия</a>
                         </li>
                         <li class="header__nav-item">
-                            <a class="header__nav-link curent link" href="./portfolio.html" title="Портфолио">Портфолио</a>
+                            <a class="header__nav-link link  curent" href="./portfolio.html" title="Портфолио">Портфолио</a>
                         </li>
                         <li class="header__nav-item">
                             <a class="header__nav-link link" href="" title="Контакты">Контакты</a>
                         </li>
                     </ul>
-                </nav> -->
-                <!--Меню контактов-->
-                <!-- <ul class="contacts-list list">
+                </nav>
+                <ul class="contacts-list list">
                     <li class="contact-list__item">
                         <a href="mailinto:info@devstudio.com" title="E-mail адрес" class="contact-list__link link">
                             <svg class="contact-list__icon" width="16" height="12">
@@ -56,9 +55,68 @@
                         </a>
                     </li>
                 </ul>
+                <button class="menu-btn js-open-menu" type="button">
+                    <svg class="menu-btn__svg" width="40" height="40">
+                        <use href="./images/icons.svg#icon-menu_oupen"></use>
+                    </svg>
+                </button>
             </div>
         </div>
-    </header> -->
+        <!--Мобильное меню -->
+        <div class="mob-menu is-hidden">
+            <div class="mob-menu__container container">
+                <button class="mob-menu__btn js-closed-menu" type="button">
+                    <svg class="mob-menu__icon-btn" width="40" height="40">
+                        <use href="./images/icons.svg#icon-close-black"></use>
+                    </svg>
+                </button>
+                <nav class="mob-menu__nav">
+                    <ul class="mob-menu__nav-list list">
+                        <li class="mob-menu__nav-item">
+                            <a class="mob-menu__nav-link link" href="./index.html"
+                                title="Студия">Студия</a>
+                        </li>
+                        <li class="mob-menu__nav-item">
+                            <a class="mob-menu__nav-link mob-menu__curent link" href="./portfolio.html" title="Портфолио">Портфолио</a>
+                        </li>
+                        <li class="mob-menu__nav-item">
+                            <a class="mob-menu__nav-link link" href="" title="Контакты">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mob-menu__contacts-wrap">
+                    <ul class="mob-menu__contacts-list list">
+                        <li class="mob-menu__contact-item">
+                            <a href="tel:+380961111111" title="Телефон" class="mob-menu__contact-tel link">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="mob-menu__contact-item">
+                            <a href="mailinto:info@devstudio.com" title="E-mail адрес" class="mob-menu__contact-email link">
+                                info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mob-menu__social-list list">
+                        <li class="mob-menu__social-item">
+                            <a class="mob-menu__social-link link" href="" title="Instagram" target="blank"
+                                rel="nooperer noreferrer">Instagram</a>
+                        </li>
+                        <li class="mob-menu__social-item">
+                            <a class="mob-menu__social-link link" href="" title="Twitter" target="blank"
+                                rel="nooperer noreferrer">Twitter</a>
+                        </li>
+                        <li class="mob-menu__social-item">
+                            <a class="mob-menu__social-link link" href="" title="Facebook" target="blank"
+                                rel="nooperer noreferrer">Facebook</a>
+                        </li>
+                        <li class="mob-menu__social-item">
+                            <a class="mob-menu__social-link link" href="" title="LinkedIn" target="blank"
+                                rel="nooperer noreferrer">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </header>
     <!--Основной контент-->
     <main>
         <!--Портфолио-->
@@ -313,6 +371,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

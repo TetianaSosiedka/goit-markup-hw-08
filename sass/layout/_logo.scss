@@ -1,5 +1,4 @@
 .logo {
-  //margin-right: 90px;
   @include font($fs: 24px, $lh: 1.17, $ls: 0.03em, $fw: 700);
   @media screen and (min-width: 1200px) {
     @include font($fs: 26px, $lh: 1.19, $ls: 0.03em, $fw: 700);
@@ -8,6 +7,9 @@
   color: #000000;
   &__colored-part {
     color: var(--color-decor);
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 90px;
   }
 }
 .logo--light {

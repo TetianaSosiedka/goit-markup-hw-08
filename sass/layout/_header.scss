@@ -4,12 +4,21 @@
 .header__wrap {
   display: flex;
   align-items: center;
+  @media screen and(max-width: 1199px) {
+    justify-content: space-between;
+  }
+  //padding-top: 10px;
+  //padding-bottom: 10px;
 }
 .header__nav {
-  @include font($fs: 14px, $lh: 1.14, $ls: 0.02em, $fw: 500);
-  display: flex;
+  display: none;
   align-items: center;
-  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+  }
 }
 .header__nav-list {
   display: flex;
@@ -23,6 +32,7 @@
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  @include font($fs: 14px, $lh: 1.14, $ls: 0.02em, $fw: 500);
   text-transform: capitalize;
   color: var(--color-headlines);
   transition: color 250ms var(--timing-function);
@@ -30,4 +40,173 @@
   &:focus {
     color: var(--color-decor);
   }
+}
+/*------Mobile menu-----*/
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: #ffffff;
+  &:hover .menu-btn__svg,
+  &:focus .menu-btn__svg {
+    fill: var(--color-decor);
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-btn__svg {
+  fill: #000000;
+  transition: fill 250ms var(--timing-function);
+}
+.mob-menu {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: #ffffff;
+  transform: translateY(0);
+  transition: transform 250ms var(--timing-function);
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+}
+.is-hidden.mob-menu {
+  transform: translateY(-100%);
+}
+.mob-menu__container {
+  position: relative;
+  padding: 40px 48px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.mob-menu__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  &:hover .mob-menu__icon-btn,
+  &:focus .mob-menu__icon-btn {
+    fill: var(--color-decor);
+    transform: rotate(90deg);
+  }
+}
+.mob-menu__icon-btn {
+  transition: fill 250ms var(--timing-function),
+    transform 250ms var(--timing-function);
+}
+.mob-menu__nav {
+  width: 100%;
+}
+.mob-menu__nav-item {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+    @media screen and (min-width: 480px) {
+      margin-bottom: 32px;
+    }
+  }
+  &:hover .mob-menu__nav-link,
+  &:focus .mob-menu__nav-link {
+    color: var(--color-decor);
+  }
+}
+.mob-menu__nav-link {
+  display: block;
+  @include font($fs: 30px, $lh: 1.175, $ls: 0.02em, $fw: 500);
+  @media screen and (min-width: 480px) {
+    font-size: 40px;
+  }
+
+  color: var(--color-headlines);
+  transition: color 250ms var(--timing-function);
+}
+.mob-menu__contacts-list {
+  margin-bottom: 50px;
+  @media screen and (min-width: 480px) {
+    margin-bottom: 64px;
+  }
+}
+.mob-menu__contact-item {
+  &:hover .mob-menu__contact-tel,
+  &:focus .mob-menu__contact-tel {
+    color: var(--color-text);
+  }
+  &:hover .mob-menu__contact-email,
+  &:focus .mob-menu__contact-email {
+    color: var(--color-decor);
+  }
+}
+.mob-menu__contact-tel {
+  display: block;
+  width: 100%;
+  @include font($fs: 25px, $lh: 1.8, $ls: 0.02em, $fw: 500);
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
+  color: var(--color-decor);
+  transition: color 250ms var(--timing-function);
+}
+.mob-menu__contact-email {
+  display: block;
+  width: 100%;
+  @include font($fs: 20px, $lh: 1.7, $ls: 0.02em, $fw: 500);
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+  }
+  color: var(--color-text);
+  transition: color 250ms var(--timing-function);
+}
+.mob-menu__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  @media screen and (min-width: 480px) {
+    margin: 0 -10px;
+  }
+}
+.mob-menu__social-item {
+  position: relative;
+  &:hover .mob-menu__social-link,
+  &:focus .mob-menu__social-link {
+    color: var(--color-text);
+  }
+}
+.mob-menu__social-item:not(:last-child) {
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+.mob-menu__social-link {
+  display: block;
+  padding: 0 5px;
+  @include font($fs: 11px, $lh: 1.22, $ls: 0.02em, $fw: 500);
+  color: var(--color-decor);
+  transition: color 250ms var(--timing-function);
+  @media screen and (min-width: 480px) {
+    padding: 0 10px;
+    font-size: 18px;
+  }
+}
+.mob-menu__curent {
+  color: var(--color-decor);
 }

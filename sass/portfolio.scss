@@ -3,6 +3,7 @@
 @import "./utils/variables";
 @import "./utils/hidden";
 @import "./utils/mixins";
+@import "./utils/is-hidden";
 
 /*Сброс стилей*/
 @import "./base/reset";
@@ -11,7 +12,6 @@
 @import "./components/container";
 @import "./components/section";
 @import "./components/current";
-@import "./components/modal";
 
 /*Макет*/
 @import "./layout/header";
