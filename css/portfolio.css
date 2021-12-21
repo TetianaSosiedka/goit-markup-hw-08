@@ -140,7 +140,7 @@ body {
 
 .modal {
   position: relative;
-  width: 528px;
+  width: 450px;
   min-height: 581px;
   padding: 40px;
   overflow: auto;
@@ -149,6 +149,12 @@ body {
   border-radius: 4px;
   transform: scale(1) translate(0);
   transition: transform 250ms var(--timing-function);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .is-hidden {
@@ -263,11 +269,20 @@ body {
   display: inline-flex;
   align-items: baseline;
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   font-weight: 400;
   color: var(--color-text);
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form__check-item {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  }
 }
 
 .contact-form__check-wrap {
@@ -275,7 +290,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 8px;
-  margin-left: 12px;
   width: 16px;
   height: 15px;
   border-radius: 2px;
@@ -283,6 +297,12 @@ body {
   border: 2px solid #000000;
   box-shadow: #ffffff 0 2px 5px 1px, #75757569 0 5px 3px 0px;
   transition: background-color 250ms var(--timing-function), border 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form__check-wrap {
+    margin-left: 12px;
+  }
 }
 
 .contact-form__check-icon {
