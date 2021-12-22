@@ -193,15 +193,7 @@
         <div class="container">
         <h2 class="title title--margin-bottom">Чем мы занимаемся</h2>
         <ul class="services__list list">
-          <li class="services-item">
-            <!-- <picture>
-              <source srcset="./images/services/service1-1x.jpg 1x, 
-              ./images/services/service1-2x.jpg 2x"
-              media="(min-width:1200px)"
-              >
-              <img class="services-item__img" src="./images/services/service1-1x.jpg" alt="Десктопные приложения"
-                width="370" />
-            </picture> -->
+          <li class="services-item">            
             <img class="services-item__img"
             srcset="./images/services/service1-1x.jpg 1x, 
               ./images/services/service1-2x.jpg 2x"
@@ -230,11 +222,16 @@
           <h2 class="title title--margin-bottom">Наша команда</h2>
           <ul class="team list">
             <li class="team__card">
-              <img class="team__img"
-                src="../images/team/crewman1-1x.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source srcset="./images/team/crewman1-1x.jpg 1x, 
+                ./images/team/crewman1-2x.jpg 2x"
+                media="(min-width:1200px)">
+                <source srcset="./images/team/crewman1-tab-1x.jpg 1x, 
+                  ./images/team/crewman1-tab-2x.jpg 2x" media="(min-width:768px)">
+                <source srcset="./images/team/crewman1-mob-1x.jpg 1x, 
+                ./images/team/crewman1-mob-2x.jpg 2x" media="(min-width:480px)">
+                <img class="team__img" src="./images/team/crewman1-mob-2x.jpg" alt="Игорь Демьяненко" width="270" />
+              </picture>
               <div class="team__board">
                   <h3 class="team__member">Игорь Демьяненко</h3>
               <p lang="en" class="team__desc">Product Designer</p>
@@ -270,7 +267,15 @@
               </ul>
             </li>
             <li class="team__card">
-              <img class="team__img" src="../images/team/crewman2-1x.jpg" alt="Ольга Репина" width="270" />
+              <picture>
+                <source srcset="./images/team/crewman2-1x.jpg 1x, 
+                              ./images/team/crewman2-2x.jpg 2x" media="(min-width:1200px)">
+                <source srcset="./images/team/crewman2-tab-1x.jpg 1x, 
+                                ./images/team/crewman2-tab-2x.jpg 2x" media="(min-width:768px)">
+                <source srcset="./images/team/crewman2-mob-1x.jpg 1x, 
+                              ./images/team/crewman2-mob-2x.jpg 2x" media="(min-width:480px)">
+                <img class="team__img" src="./images/team/crewman2-mob-2x.jpg" alt="Ольга Репина" width="270" />
+              </picture>
               <div class="team__board">
                 <h3 class="team__member">Ольга Репина</h3>
                 <p lang="en" class="team__desc">Frontend Developer</p>
@@ -307,11 +312,15 @@
               </ul>
             </li>
             <li class="team__card">
-              <img class="team__img"
-                src="../images/team/crewman3-1x.jpg"
-                alt="Николай Тарасов"
-                width="270"
-              />
+              <picture>
+              <source srcset="./images/team/crewman3-1x.jpg 1x, 
+                                            ./images/team/crewma32-2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/team/crewman3-tab-1x.jpg 1x, 
+                                              ./images/team/crewman3-tab-2x.jpg 2x" media="(min-width:768px)">
+              <source srcset="./images/team/crewman3-mob-1x.jpg 1x, 
+                                            ./images/team/crewman3-mob-2x.jpg 2x" media="(min-width:480px)">
+              <img class="team__img" src="./images/team/crewman3-mob-2x.jpg" alt="Николай Тарасов" width="270" />
+              </picture>
               <div class="team__board">
                 <h3 class="team__member">Николай Тарасов</h3>
                 <p lang="en" class="team__desc">Marketing</p>
@@ -348,7 +357,15 @@
               </ul>
             </li>
             <li class="team__card">
-              <img class="team__img" src="../images/team/crewman4-1x.jpg" alt="Михаил Ермаков" width="270" />
+              <picture>
+              <source srcset="./images/team/crewman4-1x.jpg 1x, 
+                                            ./images/team/crewman4-2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/team/crewman4-tab-1x.jpg 1x, 
+                                              ./images/team/crewman4-tab-2x.jpg 2x" media="(min-width:768px)">
+              <source srcset="./images/team/crewman4-mob-1x.jpg 1x, 
+                                            ./images/team/crewman4-mob-2x.jpg 2x" media="(min-width:480px)">
+              <img class="team__img" src="./images/team/crewman4-mob-2x.jpg" alt="Михаил Ермаков" width="270" />
+              </picture>
               <div class="team__board">
                 <h3 class="team__member">Михаил Ермаков</h3>
                 <p lang="en" class="team__desc">UI Designer</p>
